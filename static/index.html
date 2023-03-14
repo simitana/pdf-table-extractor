@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF Table Extractor</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+  <h1>PDF Table Extractor</h1>
+  <p>Envie um PDF e extraia as tabelas automaticamente.</p>
+</header>
+
+<main>
+  <section id="upload-zone" class="dropzone">
+    <p>Arraste um PDF aqui ou clique para selecionar</p>
+    <input type="file" id="file-input" accept="application/pdf" hidden>
+  </section>
+
+  <section id="jobs-panel">
+    <h2>Histórico</h2>
+    <ul id="jobs-list"></ul>
+  </section>
+
+  <section id="detail-panel" hidden>
+    <h2 id="detail-title"></h2>
+    <div id="tables-container"></div>
+  </section>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>
