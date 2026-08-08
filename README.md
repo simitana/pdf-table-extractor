@@ -69,3 +69,7 @@ Os testes de API geram PDFs de exemplo em memória com `reportlab`, sem depender
 - A detecção de tabelas roda inteiramente sobre o texto e as linhas vetoriais do PDF (via `pdfplumber`); PDFs escaneados como imagem não têm texto extraível e não são suportados sem OCR.
 - Motores adicionais (`camelot`, `tabula-py`) foram deixados de fora deliberadamente: dependem de Ghostscript/JVM no sistema, o que fragiliza a instalação sem ganho evidente sobre as três variantes de estratégia já usadas.
 - O processamento em background usa `BackgroundTasks` do FastAPI, adequado para o volume de um único worker; para paralelismo real entre múltiplos workers, trocar por uma fila (Redis/RQ ou Celery) sem alterar a camada de domínio.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
